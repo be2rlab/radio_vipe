@@ -945,4 +945,287 @@
           </thead>
           <tbody>
             <tr><td>Dyna-SLAM</td><td>1.64</td><td>3.54</td><td>2.96</td><td>0.68</td><td>1.27</td><td>—</td><td>1.86</td><td>—</td><td>2.00</td></tr>
-            <tr><td>DLD-SLAM</td><td>1.85</td><td>4.24</
+            <tr><td>DLD-SLAM</td><td>1.85</td><td>4.24</td><td class="badge-third">2.19</td><td>0.56</td><td>—</td><td>—</td><td>—</td><td>—</td><td>2.21</td></tr>
+            <tr><td>V3D-SLAM</td><td class="badge-third">1.53</td><td>7.81</td><td>2.29</td><td>0.65</td><td>0.87</td><td class="badge-third">1.69</td><td class="badge-third">1.47</td><td class="badge-second">0.58</td><td>2.10</td></tr>
+            <tr><td>DGS-SLAM</td><td>4.10</td><td>—</td><td>5.50</td><td>0.60</td><td>—</td><td>—</td><td>4.40</td><td>—</td><td>3.65</td></tr>
+            <tr><td>RoDyn-SLAM</td><td>8.30</td><td>—</td><td>5.60</td><td>1.70</td><td>—</td><td>—</td><td>2.70</td><td>—</td><td>4.58</td></tr>
+            <tr><td>DynaMON</td><td class="badge-best">1.4</td><td class="badge-third">3.9</td><td class="badge-second">2.0</td><td class="badge-third">1.4</td><td class="badge-best">0.9</td><td class="badge-second">2.1</td><td class="badge-second">1.9</td><td class="badge-best">0.5</td><td class="badge-second">1.76</td></tr>
+            <tr><td>ViPE (SAM)</td><td>2.4</td><td>3.46</td><td>2.52</td><td class="badge-best">0.54</td><td class="badge-third">1.43</td><td>3.80</td><td>2.57</td><td class="badge-third">0.6</td><td>2.17</td></tr>
+            <tr class="ours"><td>RADIO-ViPE</td><td>1.90</td><td class="badge-second">3.50</td><td>3.10</td><td class="badge-second">0.55</td><td class="badge-second">1.15</td><td>2.72</td><td>1.60</td><td class="badge-second">0.53</td><td class="badge-third">1.90</td></tr>
+            <tr class="ours-full"><td>RADIO-ViPE<sub>ark</sub></td><td class="badge-second">1.55</td><td class="badge-best">3.39</td><td class="badge-best">1.96</td><td class="badge-best">0.50</td><td class="badge-second">0.98</td><td class="badge-best">2.65</td><td class="badge-best">1.44</td><td>0.56</td><td class="badge-best">1.63</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-caption">Table II — ATE in cm on TUM-RGBD dynamic sequences (lower is better).</div>
+      <div class="table-legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#ffd700"></div> Best</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--accent)"></div> Second best</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--accent2)"></div> Third best</div>
+      </div>
+    </div>
+
+    <!-- REPLICA TABLE -->
+    <div id="tab-replica" class="tab-panel">
+      <div class="results-table-wrap">
+        <table class="results-table">
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th class="center" colspan="3">Without Background</th>
+              <th class="center" colspan="3">With Background</th>
+              <th class="center">Online</th>
+              <th class="center">Calib-Free</th>
+              <th class="center">Depth-Free</th>
+              <th class="center">Pose-Free</th>
+            </tr>
+            <tr>
+              <th></th>
+              <th class="center">mIoU%</th>
+              <th class="center">f-mIoU%</th>
+              <th class="center">Acc%</th>
+              <th class="center">mIoU%</th>
+              <th class="center">f-mIoU%</th>
+              <th class="center">Acc%</th>
+              <th></th><th></th><th></th><th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>ConceptFusion</td><td>21.07</td><td>31.51</td><td>35.65</td><td class="badge-third">20.38</td><td class="badge-third">35.75</td><td>41.58</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td></tr>
+            <tr><td>ConceptGraphs</td><td>11.63</td><td>16.61</td><td>19.80</td><td>11.72</td><td>21.35</td><td>28.28</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td></tr>
+            <tr><td>HOV-SG</td><td>16.93</td><td>31.45</td><td>34.74</td><td>19.29</td><td>30.64</td><td>35.17</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td></tr>
+            <tr><td>NACLIP-3D</td><td>20.37</td><td>35.08</td><td>47.47</td><td>15.30</td><td>16.98</td><td>26.23</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td></tr>
+            <tr><td>Trident-3D</td><td class="badge-third">21.30</td><td class="badge-third">43.34</td><td class="badge-third">54.79</td><td>20.63</td><td>38.53</td><td class="badge-third">50.31</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td></tr>
+            <tr><td>RayFronts</td><td class="badge-best">39.37</td><td class="badge-best">62.03</td><td class="badge-best">68.80</td><td class="badge-best">27.73</td><td class="badge-best">43.37</td><td class="badge-best">54.45</td><td class="check">✓</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td></tr>
+            <tr class="ours-full"><td>RADIO-ViPE<sub>ark</sub></td><td class="badge-second">24.25</td><td class="badge-second">50.63</td><td class="badge-second">59.25</td><td class="badge-second">19.00</td><td class="badge-second">37.13</td><td class="badge-second">48.38</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-caption">Table III — 3D open-vocabulary semantic segmentation on Replica (8 scenes, 51 classes). RADIO-ViPE ranks 2nd across all metrics — the <em>only</em> online, calibration-free, depth-free, pose-free method.</div>
+    </div>
+
+    <!-- COMPARISON TABLE -->
+    <div id="tab-comparison" class="tab-panel">
+      <div class="results-table-wrap">
+        <table class="results-table">
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th class="center">Online</th>
+              <th class="center">Semantics</th>
+              <th class="center">Grounding</th>
+              <th class="center">Odometry</th>
+              <th class="center">Mapping</th>
+              <th class="center">Dynamic</th>
+              <th class="center">Calib-Free</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>ORB-SLAM3</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td><td class="check">✓</td><td class="check">✓</td><td class="cross">✗</td><td class="cross">✗</td></tr>
+            <tr><td>RVWO</td><td class="check">✓</td><td class="cross">✗</td><td class="cross">✗</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="cross">✗</td></tr>
+            <tr><td>Kimera</td><td class="check">✓</td><td>Closed</td><td class="cross">✗</td><td class="check">✓</td><td class="check">✓</td><td class="cross">✗</td><td class="cross">✗</td></tr>
+            <tr><td>SamSLAM</td><td class="check">✓</td><td>Agnostic</td><td class="cross">✗</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="cross">✗</td></tr>
+            <tr><td>BBQ / ConceptGraphs</td><td class="cross">✗</td><td>Open</td><td class="check">✓</td><td class="cross">✗</td><td class="check">✓</td><td class="cross">✗</td><td class="cross">✗</td></tr>
+            <tr><td>OVO-SLAM</td><td class="check">✓</td><td>Open</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="cross">✗</td><td class="cross">✗</td></tr>
+            <tr><td>RayFronts</td><td class="check">✓</td><td>Open</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="cross">✗</td><td class="cross">✗</td></tr>
+            <tr><td>MASt3R-SLAM</td><td class="check">✓</td><td class="cross">✗</td><td class="cross">✗</td><td class="check">✓</td><td class="check">✓</td><td class="cross">✗</td><td class="check">✓</td></tr>
+            <tr><td>ViPE</td><td class="check">✓</td><td>Predefined</td><td class="cross">✗</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+            <tr class="ours-full"><td>RADIO-ViPE (Ours)</td><td class="check">✓</td><td style="color:var(--accent);font-weight:600;">Open</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-caption">Table I — RADIO-ViPE is the only system achieving all seven capabilities simultaneously.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="gallery-inner">
+    <div class="section-label">Qualitative Results</div>
+    <h2 class="section-title">Open-Vocabulary Grounding Visualizations</h2>
+    <p style="color:var(--text-muted);font-size:14px;margin-top:8px;margin-bottom:0;">
+      Results on the Replica dataset across 8 indoor scenes (office0–4, room0–2), 51 semantic classes. Queried with free-form natural language.
+    </p>
+
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="static/images/grounding1.jpg" alt="Grounding result 1"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder" style="display:none;"><div class="img-placeholder-icon">🖼</div><div class="img-placeholder-text">grounding1.jpg</div></div>
+        <div class="gallery-label">Grounding 1</div>
+      </div>
+      <div class="gallery-item">
+        <img src="static/images/grounding2.jpg" alt="Grounding result 2"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder" style="display:none;"><div class="img-placeholder-icon">🖼</div><div class="img-placeholder-text">grounding2.jpg</div></div>
+        <div class="gallery-label">Grounding 2</div>
+      </div>
+      <div class="gallery-item">
+        <img src="static/images/grounding3.jpg" alt="Grounding result 3"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder" style="display:none;"><div class="img-placeholder-icon">🖼</div><div class="img-placeholder-text">grounding3.jpg</div></div>
+        <div class="gallery-label">Grounding 3</div>
+      </div>
+      <div class="gallery-item">
+        <img src="static/images/grounding4.jpg" alt="Grounding result 4"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder" style="display:none;"><div class="img-placeholder-icon">🖼</div><div class="img-placeholder-text">grounding4.jpg</div></div>
+        <div class="gallery-label">Grounding 4</div>
+      </div>
+      <!-- Fig 4 panels -->
+      <div class="gallery-item" style="grid-column: span 2;">
+        <img src="static/images/fig4_queries.png" alt="Fig 4 - Text queries on Replica"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="img-placeholder" style="display:none;"><div class="img-placeholder-icon">🖼</div><div class="img-placeholder-text">Fig. 4 — Replica queries: Table · Pillow · 3D RADSeg PCD · Shelf · Cabinet</div></div>
+        <div class="gallery-label">Fig. 4 — Replica Queries</div>
+      </div>
+    </div>
+
+    <p style="font-family:var(--mono);font-size:11px;color:var(--text-dim);margin-top:16px;letter-spacing:0.08em;">
+      📌 Replace placeholder frames with crops from Figure 4 of the paper PDF (pages 6): Table, Pillow, 3D RADSeg PCD, Shelf, Cabinet, Table scenes.
+    </p>
+  </div>
+</section>
+
+<!-- METHOD DETAILS -->
+<section id="method">
+  <div class="method-inner">
+    <div class="section-label">Technical Details</div>
+    <h2 class="section-title">Key Formulations</h2>
+    <div class="method-grid">
+
+      <div class="method-card">
+        <div class="method-card-title">Embedding Similarity Term</div>
+        <div class="method-card-text">
+          For each edge (i, j), source pixel embeddings are projected into the target frame via bilinear interpolation and ℓ₂-normalised cosine similarity is computed:
+        </div>
+        <div class="equation-block">cs_ij(u) = Z_i(u)ᵀ Ẑ_j(P_ij(u))<br>         ────────────────────────<br>         ‖Z_i(u)‖ · ‖Ẑ_j(P_ij(u))‖</div>
+        <div class="method-card-text">
+          The residual is cast in photometric form: r_embed = λ√2(1 − cs_ij(u)), with λ=2 for magnitude compatibility with the photometric flow term.
+        </div>
+      </div>
+
+      <div class="method-card">
+        <div class="method-card-title">Temporal Stability Field</div>
+        <div class="method-card-text">
+          To distinguish static surfaces, movable objects, and actively moving agents, we aggregate per-edge cosine similarities across all connected keyframes N(i):
+        </div>
+        <div class="equation-block">S_i(u) = c̄s_i(u) · (1 − σ²_i(u)) ∈ [0, 1]</div>
+        <div class="method-card-text">
+          S≈1: genuinely static. S≈0: active motion or displaced object. This drives the Barron shape parameter α: ℓ₂ → Huber → Cauchy with thresholds θ_s=0.75, θ_m=0.35.
+        </div>
+      </div>
+
+      <div class="method-card">
+        <div class="method-card-title">Complete Objective</div>
+        <div class="method-card-text">
+          Gauss–Newton optimization jointly refines poses {T_i}, disparities {d_i}, and intrinsics {K_q}:
+        </div>
+        <div class="equation-block">E_total = γ_photo · E^ark_photo<br>        + γ_embed · E_embed<br>        + E_reg</div>
+        <div class="method-card-text">
+          The regularization term E_reg anchors disparity to foundation depth model priors, preventing drift while allowing multi-view refinement (α_disp = 1.0).
+        </div>
+      </div>
+
+      <div class="method-card">
+        <div class="method-card-title">Runtime &amp; Setup</div>
+        <div class="method-card-text">
+          RADIO-ViPE operates online at approximately <strong style="color:var(--accent)">8–10 FPS</strong>. Non-keyframe poses estimated in parallel via photometric alignment. PCA computed after an initialization buffer of keyframes for a robust projection basis. Features compressed to K=256 dimensions; bilinear upsampling to H/8 × W/8 resolution matches optical flow grid.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BIBTEX -->
+<section id="bibtex">
+  <div class="bibtex-inner">
+    <div class="section-label">Citation</div>
+    <h2 class="section-title">BibTeX</h2>
+
+    <div class="bibtex-block">
+      <div class="bibtex-header">
+        <span class="bibtex-filename">radio_vipe.bib</span>
+        <button class="copy-btn" id="copy-btn" onclick="copyBibtex()">Copy</button>
+      </div>
+      <pre class="bibtex-code" id="bibtex-content"><span class="bib-key">@misc</span>{nasser2025radiovipe,
+  <span class="bib-field">title</span>     = {<span class="bib-value">RADIO-ViPE: Online Tightly Coupled Multi-Modal Fusion
+               for Open-Vocabulary Semantic SLAM in Dynamic Environments</span>},
+  <span class="bib-field">author</span>    = {<span class="bib-value">Zaid Nasser and Mikhail Iumanov and Tianhao Li and
+               Maxim Popov and Jaafar Mahmoud and Sergey Kolyubin</span>},
+  <span class="bib-field">year</span>      = {<span class="bib-value">2025</span>},
+  <span class="bib-field">institution</span> = {<span class="bib-value">BE2R Lab, ITMO University</span>},
+  <span class="bib-field">note</span>      = {<span class="bib-value">Project page: https://github.com/be2rlab/RADIO-ViPE</span>}
+}</pre>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">BE2R LAB · ITMO UNIVERSITY</div>
+    <p class="footer-text">
+      This page was built for the RADIO-ViPE project at the
+      <a href="https://be2r.itmo.ru" target="_blank">Biomechatronics and Energy-Efficient Robotics Lab</a>,
+      ITMO University, Saint Petersburg, Russia.<br>
+      Template based on the
+      <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>
+      and <a href="https://nerfies.github.io" target="_blank">Nerfies</a>.
+      Licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.
+    </p>
+  </div>
+</footer>
+
+<!-- SCROLL TOP -->
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">↑</button>
+
+<script>
+  // Tab switching
+  function switchTab(btn, id) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + id).classList.add('active');
+  }
+
+  // Copy BibTeX
+  function copyBibtex() {
+    const raw = document.getElementById('bibtex-content').innerText;
+    navigator.clipboard.writeText(raw).then(() => {
+      const btn = document.getElementById('copy-btn');
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
+    });
+  }
+
+  // Scroll top button
+  window.addEventListener('scroll', () => {
+    const btn = document.getElementById('scroll-top');
+    if (window.scrollY > 400) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+  });
+
+  // Hide video element if source fails and show placeholder
+  document.addEventListener('DOMContentLoaded', () => {
+    const video = document.querySelector('#teaser video');
+    const placeholder = document.getElementById('video-placeholder');
+    if (video) {
+      video.addEventListener('error', () => {
+        video.style.display = 'none';
+        if (placeholder) placeholder.style.display = 'flex';
+      });
+      // If video has no src or src is empty
+      if (!video.querySelector('source[src]') || !video.querySelector('source').src) {
+        video.style.display = 'none';
+        if (placeholder) placeholder.style.display = 'flex';
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
