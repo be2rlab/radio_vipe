@@ -664,7 +664,7 @@
          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
     <div class="teaser-img-placeholder" style="display:none;">
       <div class="ph-icon">🖼</div>
-      <div class="ph-text">images/static/teaser_3.png</div>
+      <div class="ph-text">static/images/teaser_3.png</div>
     </div>
     <div class="teaser-caption">
       RADIO-ViPE — real-time open-vocabulary semantic grounding from uncalibrated monocular RGB, running online at ~8–10 FPS
@@ -1101,7 +1101,6 @@
 
   </div>
 </section>
-
 <!-- GALLERY -->
 <section id="gallery">
   <div class="gallery-inner">
@@ -1111,35 +1110,62 @@
       Results on the Replica dataset across 8 indoor scenes (office0–4, room0–2), 51 semantic classes. Queried with free-form natural language.
     </p>
 
+    <style>
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    </style>
+
     <div class="gallery-grid">
+      <!-- Row 1: Three images -->
       <div class="gallery-item">
         <img src="static/images/grounding1.jpg" alt="Grounding result 1"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="img-placeholder" style="display:none;"><div class="img-placeholder-icon">🖼</div><div class="img-placeholder-text">grounding1.jpg</div></div>
+        <div class="img-placeholder" style="display:none;">
+          <div class="img-placeholder-icon">🖼</div>
+          <div class="img-placeholder-text">grounding1.jpg</div>
+        </div>
         <div class="gallery-label">Grounding 1</div>
       </div>
+
       <div class="gallery-item">
         <img src="static/images/grounding2.jpg" alt="Grounding result 2"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="img-placeholder" style="display:none;"><div class="img-placeholder-icon">🖼</div><div class="img-placeholder-text">grounding2.jpg</div></div>
+        <div class="img-placeholder" style="display:none;">
+          <div class="img-placeholder-icon">🖼</div>
+          <div class="img-placeholder-text">grounding2.jpg</div>
+        </div>
         <div class="gallery-label">Grounding 2</div>
       </div>
+
       <div class="gallery-item">
         <img src="static/images/grounding3.jpg" alt="Grounding result 3"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="img-placeholder" style="display:none;"><div class="img-placeholder-icon">🖼</div><div class="img-placeholder-text">grounding3.jpg</div></div>
+        <div class="img-placeholder" style="display:none;">
+          <div class="img-placeholder-icon">🖼</div>
+          <div class="img-placeholder-text">grounding3.jpg</div>
+        </div>
         <div class="gallery-label">Grounding 3</div>
       </div>
-      <div class="gallery-item">
-        <img src="static/images/grounding4.jpg" alt="Grounding result 4"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="img-placeholder" style="display:none;"><div class="img-placeholder-icon">🖼</div><div class="img-placeholder-text">grounding4.jpg</div></div>
-        <div class="gallery-label">Grounding 4</div>
-      </div>
-      <div class="gallery-item" style="grid-column: span 2;">
+
+      <!-- Row 2: Full-width image -->
+      <div class="gallery-item" style="grid-column: 1 / -1;">
         <img src="static/images/results.png" alt="Fig 4 - Text queries on Replica"
              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="img-placeholder" style="display:none;"><div class="img-placeholder-icon">🖼</div><div class="img-placeholder-text">Fig. 4 — Replica queries: Table · Pillow · 3D RADSeg PCD · Shelf · Cabinet</div></div>
+        <div class="img-placeholder" style="display:none;">
+          <div class="img-placeholder-icon">🖼</div>
+          <div class="img-placeholder-text">
+            Fig. 4 — Replica queries: Table · Pillow · 3D RADSeg PCD · Shelf · Cabinet
+          </div>
+        </div>
         <div class="gallery-label">Fig. 4 — Replica Queries</div>
       </div>
     </div>
