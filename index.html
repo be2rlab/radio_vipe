@@ -178,6 +178,67 @@
     }
 
     /* ── TEASER IMAGE ── */
+    /* ── UPDATED TEASER STYLES ── */
+    #teaser {
+      padding: 0 40px 72px;
+    }
+    
+    .teaser-container {
+      max-width: 1060px; /* Doubled to fit two items side-by-side */
+      margin: 0 auto;
+      border: 1px solid var(--border-md);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--bg2);
+      box-shadow: 0 24px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(0,212,170,0.06);
+    }
+
+    /* Flex wrapper for the media items */
+    .teaser-row {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      align-items: stretch; /* Ensures both items have the same height */
+    }
+
+    .teaser-media {
+      flex: 1; /* Gives both items equal width */
+      width: 50%;
+      position: relative;
+      overflow: hidden;
+      border-right: 1px solid var(--border);
+    }
+
+    .teaser-media:last-child {
+      border-right: none;
+    }
+
+    /* Forces image and video to fill their 50% containers identically */
+    .teaser-media img, 
+    .teaser-media video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Maintains aspect ratio while filling the box */
+      display: block;
+    }
+
+    .teaser-caption {
+      text-align: center;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.09em;
+      padding: 14px 20px;
+      border-top: 1px solid var(--border);
+      background: var(--bg3);
+    }
+
+    /* Responsive: Stack them on small mobile screens */
+    @media (max-width: 768px) {
+      .teaser-row { flex-direction: column; }
+      .teaser-media { width: 100%; border-right: none; border-bottom: 1px solid var(--border); }
+    }
+/*     
     #teaser {
       padding: 0 40px 72px;
     }
@@ -218,7 +279,7 @@
       flex-direction: column; gap: 10px;
     }
     .teaser-img-placeholder .ph-icon { font-size: 32px; opacity: 0.12; }
-    .teaser-img-placeholder .ph-text { font-family: var(--mono); font-size: 11px; color: var(--text-dim); letter-spacing: 0.1em; }
+    .teaser-img-placeholder .ph-text { font-family: var(--mono); font-size: 11px; color: var(--text-dim); letter-spacing: 0.1em; } */
 
     /* ── ABSTRACT ── */
     #abstract {
@@ -659,31 +720,30 @@
 
 <!-- TEASER IMAGE -->
 <section id="teaser">
-  <div class="teaser-container teaser-split">
-
-    <!-- LEFT: IMAGE -->
-    <div class="teaser-media">
-      <img src="static/images/teaser_3.png"
-           alt="RADIO-ViPE Teaser"
-           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="teaser-img-placeholder" style="display:none;">
-        <div class="ph-icon">🖼</div>
-        <div class="ph-text">static/images/teaser_3.png</div>
+  <div class="teaser-container">
+    <div class="teaser-row">
+      <!-- LEFT: IMAGE -->
+      <div class="teaser-media">
+        <img src="static/images/teaser_3.png" alt="RADIO-ViPE Teaser"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="teaser-img-placeholder" style="display:none; height: 300px;">
+          <div class="ph-icon">🖼</div>
+          <div class="ph-text">static/images/teaser_3.png</div>
+        </div>
       </div>
-    </div>
 
-    <!-- RIGHT: VIDEO -->
-    <div class="teaser-media">
-      <video autoplay muted loop playsinline controls>
-        <source src="static/videos/radio-vip-vis.mp4" type="video/mp4">
-      </video>
+      <!-- RIGHT: VIDEO -->
+      <div class="teaser-media">
+        <video autoplay muted loop playsinline controls>
+          <source src="static/videos/radio-vip-vis.mp4" type="video/mp4">
+        </video>
+      </div>
     </div>
 
     <!-- CAPTION -->
     <div class="teaser-caption">
       RADIO-ViPE — real-time open-vocabulary semantic grounding from uncalibrated monocular RGB, running online at ~8–10 FPS
     </div>
-
   </div>
 </section>
 
